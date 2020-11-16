@@ -3,6 +3,6 @@ mobile robotics
 
 this is a test 
 
-Aaron Tarrell Essex
+Aaron Essex
 
-Katiso Jeremy Mabulu
+Katiso Mabulu
