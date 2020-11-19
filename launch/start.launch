@@ -6,9 +6,9 @@
 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-x 0 -y 0 -z 0 -urdf -model turtlebot3_waffle -param robot_description" output="screen"/>
     <node pkg="turtlebot3_teleop" type="turtlebot3_teleop_key" name="turtlebot3_teleop_keyboard"  output="screen"/>
-    <node pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pub" />
-    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state-publisher" />
     <node type="rviz" name="rviz" pkg="rviz" required="true"/>
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" value="$(find booster1)/worlds/cafe.world"/>
     </include>
