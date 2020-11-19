@@ -16,9 +16,10 @@
 
     <!-- Describe the tags -->
     <rosparam param="tag_descriptions">[
-      {id: 1, size: 0.163513},
-      {id: 2, size: 0.163513, frame_id: a_frame},
-      {id: 3, size: 0.163513, frame_id: tag_2},]
+      {id: 1, size: 0.163513, frame_id: tag_1},
+      {id: 2, size: 0.163513, frame_id: tag_2},
+      {id: 3, size: 0.163513, frame_id: tag_3},]
     </rosparam>
   </node>
+  <node name="republish" type="republish" pkg="image_transport" output="screen" args="compressed in:=/axis_camera raw out:=/axis_camera/image_raw" />
 </launch>

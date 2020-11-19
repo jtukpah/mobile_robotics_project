@@ -9,6 +9,7 @@
     <node type="rviz" name="rviz" pkg="rviz" required="true"/>
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+    <node name="republish" type="republish" pkg="image_transport" output="screen" args="compressed in:=/axis_camera raw out:=/axis_camera/image_raw" />
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" value="$(find booster1)/worlds/cafe.world"/>
     </include>
