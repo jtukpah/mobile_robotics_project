@@ -22,4 +22,5 @@
     </rosparam>
   </node>
   <node name="republish" type="republish" pkg="image_transport" output="screen" args="compressed in:=/axis_camera raw out:=/axis_camera/image_raw" />
+  <node pkg="rosbag" type="record" name="rosbag_apriltag_record_cam" args="-o /home/river/, record /tag_detections	/tag_detections_image" />
 </launch>
